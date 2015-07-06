@@ -15,7 +15,7 @@ First, make sure that you have a Docker Engine installed on your host for more i
 
 once the installation finishes, check out your docker images
 
-   $ sudo docker images 
-   $ sudo docker run -it mongodb-azure bash
+    $ sudo docker images 
+    $ sudo docker run -it mongodb-azure bash
 
 Now, you have a decorized container of MongoDB-Azure-Ansible.
