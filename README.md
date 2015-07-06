@@ -1,9 +1,9 @@
-# MOngoDB  on Windows Azure Image
+# MongoDB  on Windows Azure Image
 
 This docker file creates a docker image for [MongoDB-Azure-Ansible](https://github.com/aabdulwahed/MongoDB-Azure-Ansible), which creates and configures MongoDB Cluster over Windows Azure Cloud, uses MongoDB Management Service or (MMS) to manage backup and restore processes and uses NewRelic monitoring tool to track the running services on MongoDB Servers.
 
 
-**Build Generic Image**
+**Build Generic Image and Run**
 
 First, make sure that you have a Docker Engine installed on your host for more information [how to install docker](https://docs.docker.com/installation/ubuntulinux/), download then run the following command lines:
 
@@ -19,3 +19,9 @@ once the installation finishes, check out your docker images
     $ sudo docker run -it mongodb-azure bash
 
 Now, you have a decorized container of MongoDB-Azure-Ansible.
+
+**From Docker hub**
+
+Or simply pull my image from docker hub
+
+    $ sudo docker run -it ahmedabd/mongodb-azure:v1 bash 
