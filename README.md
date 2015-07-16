@@ -34,7 +34,7 @@ Edit hosts file, by modifying the value of ansible_ssh_host "in hosts file" to m
 
      $ vi MongoDB-Azure-Ansible/hosts
 
-Add your MMS keys, New-Relic keys and admin password, check out this file <code>group_vars/all _</code>
+Add your MMS keys, New-Relic keys and admin password, check out this file <code>group_vars/all _</code>, for more information how to get your MMS Group ID and API keys, check out this [link](https://github.com/aabdulwahed/MongoDB-Azure-Ansible#MongoDB_Management_Service), and for New-Relic, check out this [NEWRELIC](https://github.com/aabdulwahed/MongoDB-Azure-Ansible#NewRelic_Server_Monitor)
 
 **Build Docker Image**
 
