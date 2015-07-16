@@ -1,7 +1,0 @@
----
-# File: main.yml
-# Type: defaults
-# Part: NewRelic
-
-# new relic account key
-newrelic_key: {{ newrelic_key }}
