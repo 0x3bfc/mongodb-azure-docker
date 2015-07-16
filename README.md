@@ -14,7 +14,8 @@ If you did not create your azure certificates, please read more how to create Az
 
 **Edit Configuration Files**
 
-* Edit Vagrantfile by modifying cloud service name and Deployment service name, this name must be **unique**
+Edit Vagrantfile by modifying cloud service name and Deployment service name, this name must be **unique**
+
 
      $ vi MongoDB-Azure-Ansible/Vagrantfile
      ....
@@ -29,11 +30,11 @@ Also change storage account name and Subscription ID:
      azure.storage_acct_name = 'vagrantazure1'
      ....
 
-* Edit hosts file, by modifying the value of ansible_ssh_host "in hosts file" to match the name of <code>cloudservicename.cloudapp.net</code> in Vagrantfile
+Edit hosts file, by modifying the value of ansible_ssh_host "in hosts file" to match the name of <code>cloudservicename.cloudapp.net</code> in Vagrantfile
 
      $ vi MongoDB-Azure-Ansible/hosts
 
-* Add your MMS keys, New-Relic keys and admin password, check out this file <code>group_vars/all _</code>
+Add your MMS keys, New-Relic keys and admin password, check out this file <code>group_vars/all _</code>
 
 **Build Docker Image**
 
@@ -41,19 +42,19 @@ Also change storage account name and Subscription ID:
 
 **Start MongoDB Deployment**
 
-1. Start new container
+Start new container
    
      $ sudo docker run -it mongodb-test:v1
 
-2. Creaate Azure MongoDB cluster
+Creaate Azure MongoDB cluster
 
      $ vagrant up --provider azure
 
-3. Start MongoDB Deployment
+Start MongoDB Deployment
 
      $  ansible-playbook -i hosts playbook.yml -vvvv
 
-4. In case of recovery or scaling out you mongodb cluster
+In case of recovery or scaling out you mongodb cluster
 
      $ vagrant up --provider azure
      $ ansible-playbook -i hosts recovery.yml -vvvv
@@ -62,6 +63,5 @@ Also change storage account name and Subscription ID:
 
 Once, your installation has been deployed, you can test the running mongodb 
 
-    $ mongo <cloudservicename.cloudapp.net>:40000/admin -u admin -p <adminpassword>
-
-    PRIMARY>> rs.status() 
+     $ mongo <cloudservicename.cloudapp.net>:40000/admin -u admin -p <adminpassword>
+     PRIMARY>> rs.status() 
