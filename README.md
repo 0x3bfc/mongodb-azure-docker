@@ -63,5 +63,67 @@ In case of recovery or scaling out you mongodb cluster
 
 Once, your installation has been deployed, you can test the running mongodb 
 
-     $ mongo <cloudservicename.cloudapp.net>:40000/admin -u admin -p <adminpassword>
-     PRIMARY>> rs.status() 
+	$ mongo <cloudservicename.cloudapp.net>:40000/admin -u admin -p <adminpassword>
+	PRIMARY>> rs.status() 
+		{
+				"set" : "master",
+				"date" : ISODate("2015-07-16T14:33:34Z"),
+				"myState" : 1,
+				"members" : [
+						{
+								"_id" : 0,
+								"name" : "master-node:40000",
+								"health" : 1,
+								"state" : 1,
+								"stateStr" : "PRIMARY",
+								"uptime" : 970,
+								"optime" : {
+										"t" : 1437056561000,
+										"i" : 2
+								},
+								"optimeDate" : ISODate("2015-07-16T14:22:41Z"),
+								"electionTime" : {
+										"t" : 1437056518000,
+										"i" : 1
+								},
+								"electionDate" : ISODate("2015-07-16T14:21:58Z"),
+								"self" : true
+						},
+						{
+								"_id" : 1,
+								"name" : "replica1:40000",
+								"health" : 1,
+								"state" : 2,
+								"stateStr" : "SECONDARY",
+								"uptime" : 676,
+								"optime" : {
+										"t" : 1437056561000,
+										"i" : 2
+								},
+								"optimeDate" : ISODate("2015-07-16T14:22:41Z"),
+								"lastHeartbeat" : ISODate("2015-07-16T14:33:33Z"),
+								"lastHeartbeatRecv" : ISODate("2015-07-16T14:33:33Z"),
+								"pingMs" : 0,
+								"syncingTo" : "master-node:40000"
+						},
+						{
+								"_id" : 2,
+								"name" : "replica2:40000",
+								"health" : 1,
+								"state" : 2,
+								"stateStr" : "SECONDARY",
+								"uptime" : 668,
+								"optime" : {
+										"t" : 1437056561000,
+										"i" : 2
+								},
+								"optimeDate" : ISODate("2015-07-16T14:22:41Z"),
+								"lastHeartbeat" : ISODate("2015-07-16T14:33:33Z"),
+								"lastHeartbeatRecv" : ISODate("2015-07-16T14:33:33Z"),
+								"pingMs" : 0,
+								"syncingTo" : "master-node:40000"
+						}
+				],
+				"ok" : 1
+		}
+
